@@ -1,0 +1,588 @@
+  .counter {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--accent);
+    background: var(--accent-bg);
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+    margin-bottom: 24px;
+
+    &:hover {
+      border-color: var(--accent-border);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  }
+
+  .hero {
+    position: relative;
+
+    .base,
+    .framework,
+    .vite {
+      inset-inline: 0;
+      margin: 0 auto;
+    }
+
+    .base {
+      width: 170px;
+      position: relative;
+      z-index: 0;
+    }
+
+    .framework,
+    .vite {
+      position: absolute;
+    }
+
+    .framework {
+      z-index: 1;
+      top: 34px;
+      height: 28px;
+      transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
+        scale(1.4);
+    }
+
+    .vite {
+      z-index: 0;
+      top: 107px;
+      height: 26px;
+      width: auto;
+      transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
+        scale(0.8);
+    }
+  }
+
+  #center {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    place-content: center;
+    place-items: center;
+    flex-grow: 1;
+
+    @media (max-width: 1024px) {
+      padding: 32px 20px 24px;
+      gap: 18px;
+    }
+  }
+
+  #next-steps {
+    display: flex;
+    border-top: 1px solid var(--border);
+    text-align: left;
+
+    & > div {
+      flex: 1 1 0;
+      padding: 32px;
+      @media (max-width: 1024px) {
+        padding: 24px 20px;
+      }
+    }
+
+    .icon {
+      margin-bottom: 16px;
+      width: 22px;
+      height: 22px;
+    }
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  #docs {
+    border-right: 1px solid var(--border);
+
+    @media (max-width: 1024px) {
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+  }
+
+  #next-steps ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+    margin: 32px 0 0;
+
+    .logo {
+      height: 18px;
+    }
+
+    a {
+      color: var(--text-h);
+      font-size: 16px;
+      border-radius: 6px;
+      background: var(--social-bg);
+      display: flex;
+      padding: 6px 12px;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        box-shadow: var(--shadow);
+      }
+      .button-icon {
+        height: 18px;
+        width: 18px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      margin-top: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      a {
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  #spacer {
+    height: 88px;
+    border-top: 1px solid var(--border);
+    @media (max-width: 1024px) {
+      height: 48px;
+    }
+  }
+
+  .ticks {
+    position: relative;
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: -4.5px;
+      border: 5px solid transparent;
+    }
+
+    &::before {
+      left: 0;
+      border-left-color: var(--border);
+    }
+    &::after {
+      right: 0;
+      border-right-color: var(--border);
+    }
+  }
+
+
+  body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* English Text */
+  h1, h2, h3, .title {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+  }
+
+  /* Tamil Text */
+  .tamil {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    line-height: 1.8;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI';
+    background: linear-gradient(135deg, #7B1E3A, #D4AF37);
+    color: white;
+    text-align: center;
+  }.hero {
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #7B1E3A, #D4AF37);
+    color: white;
+  }
+
+  /* Couple Image */
+  .couple-img {
+    width: 220px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+  }
+
+  /* Titles */
+  .hero-title {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #FFD700;
+    letter-spacing: 1px;
+  }
+  .hero-title {
+    text-shadow: 0 0 10px rgba(255,215,0,0.6);
+  }
+  /* Text */
+  .hero-text {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 500px;
+  }
+
+  /* Divider */
+  .divider {
+    width: 80px;
+    height: 3px;
+    background: #FFD700;
+    margin: 20px 0;
+    border-radius: 5px;
+  }
+
+  /* Tamil */
+  .tamil {
+    font-family: 'Noto Sans Tamil', sans-serif;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 24px;
+    }
+
+    .hero-text {
+      font-size: 16px;
+    }
+
+    .couple-img {
+  
+    width: 150px;
+    }
+  }
+
+  .couple-img {
+  
+    width: 450px;
+    margin: auto;
+  }
+
+  .details {
+    padding: 50px;
+    background: rgba(0,0,0,0.3);
+  }
+
+  .gallery .floating {
+  margin-left: 10%;
+    width: 250px;
+    position: absolute;
+    animation: float 6s infinite;
+    opacity: 0.3;
+  }
+  .top-garland {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+  }
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0px); }
+  }
+  .story-section {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .story-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 700px;
+    margin: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .story-card:hover {
+    transform: scale(1.03);
+  }
+
+  .story-card.tamil {
+    border: 2px solid #D4AF37;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #FFD700;
+  }
+
+  .story-card p {
+    font-size: 18px;
+    line-height: 1.8;
+  } 
+
+  .footer {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #7B1E3A, #D4AF37);
+    color: white;
+  }
+
+  .footer h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  .qr-section {
+    margin: 20px 0;
+  }
+
+  .map-btn {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #7B1E3A;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .map-btn:hover {
+    background: #FFD700;
+    color: black;
+  }
+
+  .closing-text {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+  .tamil {
+    font-family: "Noto Sans Tamil", sans-serif;
+  }
+
+  .details-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 20px;
+  }
+
+  /* Card */
+  .details-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px 25px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .details-card:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  /* Title */
+  .details-title {
+    text-align: center;
+    color: #FFD700;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  /* Row */
+  .detail-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    font-size: 17px;
+  }
+
+  .detail-row span {
+    font-size: 22px;
+  }
+
+  /* Tamil */
+  .tamil-card {
+    border: 1px solid #D4AF37;
+  }
+
+  .tamil {
+    font-family: 'Noto Sans Tamil', sans-serif;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .details-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .couple-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: #FFD700;
+  }
+
+  .name-reveal {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+  /* Boy & Girl */
+ .person {
+  position: absolute;
+  bottom: 0;
+  width: 220px;
+  height: 50%;
+}
+
+  .left {
+    left: 15%;
+  }
+
+  .right {
+    right: 15%;
+  }
+
+  /* Names */
+  .names-container {
+    z-index: 2;
+  }
+.name {
+  position: absolute;
+ 
+  font-size: 20px;
+  color: #FFD700;
+  font-family: 'Great Vibes', cursive;
+}
+  /* Couple Names */
+/* Main couple name BIG */
+.couple-names {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+
+  .couple-names span {
+    font-size: 36px;
+  }
+
+  /* Tagline */
+  .tagline {
+    font-size: 18px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+
+  /* Tamil */
+  .tamil {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    margin-top: 5px;
+  }
+  /* Heart animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+  /* Mobile */
+ @media (max-width: 768px) {
+  .person {
+    width: 140px;
+  }
+
+  .name {
+    font-size: 20px;
+    bottom: 160px;
+  }
+
+  .couple-names {
+    font-size: 28px;
+  }
+}
+
+
+
+.left-name {
+  left: 8%;
+}
+
+.right-name {
+  right: 8%;
+}
+
+/* Center Final Content */
+.center-content {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Heart */
+.heart {
+  font-size: 36px;
+  margin-bottom: 10px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Final Names */
+
+
+/* Tagline */
+.tagline {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.tamil {
+  font-family: 'Noto Sans Tamil', sans-serif;
+}
+
+
+
+  /* /////// Global Styles ////// */
+
+
+
+
+ 
+/* Individual Names */
+
+
+
+/* Mobile */

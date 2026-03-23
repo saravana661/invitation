@@ -625,7 +625,19 @@
     font-size: 20px;
     bottom: 160px;
   }
+.center-content {
 
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.couple-names{
+  font-size: 28px;
+  color: #FFD700;
+  font-family: 'Great Vibes', cursive;
+  top: 50px;
+}
   .couple-names {
     font-size: 28px;
   }
@@ -651,10 +663,10 @@
 } */
  .center-content {
     position: relative;
-    top: auto;
+    top: 50%;
     left: auto;
     transform: none;
-    margin-top: 40px;
+   
   }
 /* Heart */
 .heart {
@@ -686,11 +698,12 @@
   .gallery-section {
     display: block;
   }
-  .centerContent{
-    margin-top: 25%;
-    left: 50%;
-      transform: translateX(-50%);
-      background:#7B1E3A !important;
+ 
+  .couple-names {
+    font-size: 28px;
+    color: #FFD700;
+    font-family: 'Great Vibes', cursive;
+    top: 50%;
   }
 }
 

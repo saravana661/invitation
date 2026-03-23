@@ -10,7 +10,7 @@ export default function NameReveal() {
       {/* Boy */}
       <motion.div
         className="frame left-frame"
-        initial={{ x: -200, opacity: 0 }}
+        initial={{ x: 200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
       >
@@ -29,7 +29,7 @@ export default function NameReveal() {
       {/* Girl */}
       <motion.div
         className="frame right-frame"
-        initial={{ x: 200, opacity: 0 }}
+        initial={{ x: -200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >

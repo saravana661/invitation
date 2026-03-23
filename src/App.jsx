@@ -22,15 +22,7 @@ function App() {
     container.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-useEffect(() => {
-  const container = containerRef.current;
 
-  const interval = setInterval(() => {
-    container.scrollBy({ top: window.innerHeight, behavior: "smooth" });
-  }, 5000); // every 5 sec
-
-  return () => clearInterval(interval);
-}, []);
   
   return (
     <div className="scroll-container" ref={containerRef}>

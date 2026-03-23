@@ -5,7 +5,7 @@ export default function Gallery() {
   return (
     <div className="gallery">
       <img src={flower} className="top-garland" />
-      <img src={flowerG} className="floating delay" />
+      {/* <img src={flowerG} className="floating delay" /> */}
     </div>
   );
 }

@@ -1,3 +1,13 @@
+  body, html {
+  overflow-x: hidden;
+}
+  
+  .details-wrapper,
+.story-section,
+.footer {
+  padding: 40px 15px;
+}
+
   .counter {
     font-size: 16px;
     padding: 5px 10px;
@@ -16,6 +26,7 @@
       outline-offset: 2px;
     }
   }
+
 
   .hero {
     position: relative;
@@ -207,7 +218,7 @@
     color: white;
     text-align: center;
   }.hero {
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
     text-align: center;
     display: flex;
@@ -220,11 +231,17 @@
   }
 
   /* Couple Image */
-  .couple-img {
+  /* .couple-img {
     width: 620px;
     margin-bottom: 20px;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
-  }
+  } */
+
+  .couple-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
 
   /* Titles */
   .hero-title {
@@ -267,15 +284,12 @@
       font-size: 16px;
     }
 
-    .couple-img {
-  
-    width: 250px;
-    }
+    
   }
 
   .couple-img {
   
-    width: 550px;
+    width: 100%;
     margin: auto;
   }
 
@@ -481,19 +495,33 @@
     color: #FFD700;
   }
 
-  .name-reveal {
+  /* .name-reveal {
   position: relative;
   height: 100vh;
   overflow: hidden;
   text-align: center;
+} */
+
+.name-reveal {
+  position: relative;
+  min-height: 100vh; /* instead of fixed */
+  padding: 40px 20px;
+  overflow: hidden;
 }
 
   /* Boy & Girl */
- .person {
+ /* .person {
   position: absolute;
   bottom: 0;
   width: 220px;
   height: 50%;
+} */
+
+.person {
+  position: absolute;
+  bottom: 0;
+  width: 180px;
+  max-width: 40%;
 }
 
   .left {
@@ -549,8 +577,13 @@
 
   /* Mobile */
  @media (max-width: 768px) {
-  .person {
+  /* .person {
     width: 140px;
+  } */
+
+    .person {
+    width: 120px;
+    bottom: 0;
   }
 
   .name {
@@ -574,14 +607,20 @@
 }
 
 /* Center Final Content */
-.center-content {
+/* .center-content {
   position: absolute;
   top: 25%;
   left: 25%;
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
+} */
+ .center-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 40px;
+  }
 /* Heart */
 .heart {
   font-size: 36px;

@@ -55,7 +55,9 @@ export default function NameReveal() {
         <div style={styles.heart}>❤️</div>
 
         <h2 style={styles.coupleNames}>
-          Saravana & Mahalakshmi
+          <span>Saravana & </span>
+          <br />
+          <span>Mahalakshmi</span>
         </h2>
 
         <p style={styles.tagline}>Together Forever</p>
@@ -80,7 +82,7 @@ const styles = {
   centerContent: {
     position: "absolute",
     top: "20%",   // moved slightly up for balance
-    left: "0%",
+    left: "25%",
     transform: "translate(-50%, -50%)",
     zIndex: 3,
   },

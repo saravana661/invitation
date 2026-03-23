@@ -7,15 +7,18 @@ import "./App.css";
 import NameReveal from "./components/NameReveal";
 function App() {
   return (
-   <div style={{overflowX:'hidden'}}>
-      <Hero />
-      <Details />
-      <NameReveal />
-      <Story />
-      <Gallery />
-      <Footer />
+    <div className="scroll-container">
+      <section className="page"><Hero /></section>
+      <section className="page"><Details /></section>
+      <section className="page"><NameReveal /></section>
+      <section className="page"><Story /></section>
+    <section className="gallery-section">
+  <Gallery />
+</section>
+      <section className="page"><Footer /></section>
     </div>
   );
 }
 
 export default App;
+

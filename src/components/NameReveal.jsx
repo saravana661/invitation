@@ -70,7 +70,7 @@ export default function NameReveal() {
 const styles = {
   container: {
     position: "relative",
-    height: "100vh",
+    minHeight: "100vh",
     width: "100%",
     overflow: "hidden",
     textAlign: "center",
@@ -79,8 +79,8 @@ const styles = {
   /* CENTER CONTENT */
   centerContent: {
     position: "absolute",
-    top: "28%",   // moved slightly up for balance
-    left: "19%",
+    top: "20%",   // moved slightly up for balance
+    left: "4%",
     transform: "translate(-50%, -50%)",
     zIndex: 3,
   },

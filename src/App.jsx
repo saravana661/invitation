@@ -7,7 +7,7 @@ import "./App.css";
 import NameReveal from "./components/NameReveal";
 function App() {
   return (
-    <div>
+   <div style={{overflowX:'hidden'}}>
       <Hero />
       <Details />
       <NameReveal />

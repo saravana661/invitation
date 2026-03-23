@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import couple from "../assets/couple.png";
+import couple from "../assets/coupleM.png";
 
 export default function Hero() {
   return (

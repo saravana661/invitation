@@ -48,13 +48,14 @@ export default function NameReveal() {
       {/* Center Content */}
       <motion.div
         className="center-content"
-        initial={{ scale: 0, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
+      initial={{ scale: 0, opacity: 0 }}
+       whileInView={{ scale: 1, opacity: 1 }}
         transition={{ delay: 2, duration: 0.8 }}
       >
-        <div className="heart">❤️</div>
+      
 
-        <h2 className="couple-names">
+        <h2 className="couple-names"style={{marginTop:"190px"}}>
+            <div className="heart">❤️</div>
           <span>Saravana &</span><br />
           <span>Mahalakshmi</span>
         </h2>

@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 
 export default function Details() {
   return (
-    <div className="details-wrapper mt-5">
+    
 
+
+
+    <div className="details-wrapper mt-5">
       <motion.div
         className="details-card"
         initial={{ opacity: 0, y: 80, scale: 0.9 }}

@@ -1,11 +1,10 @@
 import { color, motion } from "framer-motion";
 
 export default function Footer() {
-  const lat = 12.7596;
-  const lng = 80.0075;
+const lat = 12.7619329;
+const lng = 80.0022034;
 
-  const locationURL = `https://www.google.com/maps?q=${lat},${lng}`;
-
+const locationURL = `https://www.google.com/maps?q=${lat},${lng}`;
   return (
     <motion.div
       className="footer"

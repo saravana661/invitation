@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 
 export default function Footer() {
   const lat = 12.7596;
@@ -13,8 +13,9 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <h2>📍 Venue Location</h2>
-
+     <h2 style={{ color: "#FFD700" ,fontWeight:'bold',fontFamily:'Playfair Display' }} className="text-white">
+  📍 Venue Location
+</h2>
       <p>
         Balaji Marriage Hall <br />
         Singaperumal Koil, Chengalpet, 603204

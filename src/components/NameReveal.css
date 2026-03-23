@@ -1,0 +1,156 @@
+/* ================= CONTAINER ================= */
+.name-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* ================= CENTER ================= */
+.center-content {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.heart {
+  font-size: 36px;
+  margin-bottom: 10px;
+  animation: pulse 1.5s infinite;
+}
+
+.couple-names {
+  font-size: 48px;
+  color: #FFD700;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(255,215,0,0.6);
+  font-family: 'Great Vibes', cursive;
+}
+
+.tagline {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ================= FRAMES ================= */
+.frame {
+  position: absolute;
+  bottom: 120px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #FFD700;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  background: #fff;
+}
+
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-frame {
+  left: 15%;
+}
+
+.right-frame {
+  right: 15%;
+}
+
+/* ================= NAMES ================= */
+.person-name {
+  position: absolute;
+  bottom: 60px;
+  width: 220px;
+  text-align: center;
+  font-size: 22px;
+  color: #FFD700;
+  font-family: 'Great Vibes', cursive;
+}
+
+.left-name {
+  left: 15%;
+}
+
+.right-name {
+  right: 15%;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  .frame {
+    width: 160px;
+    height: 160px;
+  }
+
+  .person-name {
+    width: 160px;
+    font-size: 18px;
+  }
+
+  .couple-names {
+    font-size: 32px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+
+  .frame {
+    width: 120px;
+    height: 120px;
+    bottom: 90px;
+  }
+
+  .left-frame {
+    left: 5%;
+  }
+
+  .right-frame {
+    right: 5%;
+  }
+
+  .person-name {
+    width: 120px;
+    font-size: 16px;
+    bottom: 30px;
+  }
+
+  .left-name {
+    left: 5%;
+  }
+
+  .right-name {
+    right: 5%;
+  }
+
+  .couple-names {
+    font-size: 26px;
+  }
+
+  .heart {
+    font-size: 28px;
+  }
+
+  .tagline {
+    font-size: 14px;
+  }
+  .center-content {
+      
+    left: 25%;
+  }
+}

@@ -466,7 +466,7 @@
   display: flex;
   justify-content: center;
   padding: 40px 20px;
-  margin-top: 25% !important;
+  
 }
 
   /* Card */
@@ -480,6 +480,7 @@
   border: 1px solid rgba(255,255,255,0.2);
   text-align: center;
   transition: 0.3s;
+  margin-top: 40%;
 }
 
 .details-card:hover {
@@ -684,6 +685,68 @@
 @media (max-width: 768px) {
   .gallery-section {
     display: block;
+  }
+  .centerContent{
+    margin-top: 25%;
+    left: 50%;
+      transform: translateX(-50%);
+      background:#7B1E3A !important;
+  }
+}
+
+
+
+/* DOWN BUTTON */
+.down-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  background: rgba(255, 215, 0, 0.9);
+  color: #7B1E3A;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+  z-index: 10;
+}
+
+/* TOP BUTTON */
+.top-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: #FFD700;
+  color: #7B1E3A;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* BOUNCE ANIMATION */
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -10px); }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .down-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .top-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 }
 

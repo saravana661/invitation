@@ -19,7 +19,7 @@ export default function Details() {
           <div className="icon">📅</div>
           <div>
             <p className="label">Date</p>
-            <p className="value">25 May 2026</p>
+            <p className="value">25 March 2026</p>
           </div>
         </div>
 

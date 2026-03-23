@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { QRCodeCanvas } from "qrcode.react";
 
 export default function Footer() {
-  const locationURL = "https://maps.app.goo.gl/MmqCDCuXLFKCuNGq6";
+  const lat = 12.7596;
+  const lng = 80.0075;
+
+  const locationURL = `https://www.google.com/maps?q=${lat},${lng}`;
 
   return (
     <motion.div
@@ -13,36 +15,30 @@ export default function Footer() {
     >
       <h2>📍 Venue Location</h2>
 
-      {/* English */}
       <p>
         Balaji Marriage Hall <br />
-        Singaperumal Koil,Chengalpet,603204
+        Singaperumal Koil, Chengalpet, 603204
       </p>
 
-      {/* Tamil */}
-      {/* <p>
-        ஏபிசி திருமண மண்டபம் <br />
-        சென்னை, தமிழ்நாடு
-      </p> */}
-
-      {/* QR Code */}
       <div className="qr-section">
-        <QRCodeCanvas value={locationURL} size={140} />
-        <p>Scan to view location</p>
+        <iframe
+          width="340"
+          height="340"
+          style={{ border: 0, borderRadius: "10px" }}
+          src={`https://www.google.com/maps?q=${lat},${lng}&output=embed`}
+        />
       </div>
 
-      {/* Map Button */}
-      <a href={locationURL} target="_blank" rel="noreferrer">
-        <button className="map-btn">Open in Google Maps</button>
-      </a>
+      <button
+        onClick={() => window.open(locationURL, "_blank")}
+        className="map-btn"
+      >
+        Open Map
+      </button>
 
       <h3 className="closing-text">
         💕 We look forward to celebrating with you 💕
       </h3>
-
-      {/* <p className="closing-text tamil">
-        உங்கள் வருகையை ஆவலுடன் எதிர்நோக்குகிறோம்
-      </p> */}
     </motion.div>
   );
 }

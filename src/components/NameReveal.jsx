@@ -7,7 +7,46 @@ export default function NameReveal() {
     <div style={styles.container}>
 
       {/* Center Content */}
-      <motion.div
+    
+      {/* Boy */}
+     {/* Boy Frame */}
+<motion.div
+  style={styles.leftFrame}
+  initial={{ x: -200, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1 }}
+>
+  <img src={boy} alt="boy" style={styles.image} />
+</motion.div>
+
+<motion.h1
+  style={styles.leftName}
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ delay: 0.5 }}
+>
+  Saravana
+</motion.h1>
+
+{/* Girl Frame */}
+<motion.div
+  style={styles.rightFrame}
+  initial={{ x: 200, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ delay: 1, duration: 1 }}
+>
+  <img src={girl} alt="girl" style={styles.image} />
+</motion.div>
+
+<motion.h1
+  style={styles.rightName}
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ delay: 1.3 }}
+>
+  Mahalakshmi
+</motion.h1>
+  <motion.div
         style={styles.centerContent}
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -21,44 +60,6 @@ export default function NameReveal() {
 
         <p style={styles.tagline}>Together Forever</p>
       </motion.div>
-
-      {/* Boy */}
-      <motion.img
-        src={boy}
-        alt="boy"
-        style={styles.leftPerson}
-        initial={{ x: -200, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-      />
-
-      <motion.h1
-        style={styles.leftName}
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.5 }}
-      >
-        Saravana
-      </motion.h1>
-
-      {/* Girl */}
-      <motion.img
-        src={girl}
-        alt="girl"
-        style={styles.rightPerson}
-        initial={{ x: 200, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-      />
-
-      <motion.h1
-        style={styles.rightName}
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1.3 }}
-      >
-        Mahalakshmi
-      </motion.h1>
 
     </div>
   );
@@ -75,11 +76,11 @@ const styles = {
     textAlign: "center",
   },
 
-  /* CENTER */
+  /* CENTER CONTENT */
   centerContent: {
     position: "absolute",
-    top: "45%",
-    left: "50%",
+    top: "28%",   // moved slightly up for balance
+    left: "19%",
     transform: "translate(-50%, -50%)",
     zIndex: 3,
   },
@@ -104,35 +105,59 @@ const styles = {
     marginTop: "10px",
   },
 
-  /* BOY */
-  leftPerson: {
+  /* LEFT FRAME (BOY) */
+  leftFrame: {
     position: "absolute",
-    bottom: 0,
-    left: "10%",
-    width: "clamp(120px, 18vw, 220px)",
+    bottom: "120px",   // lifted up
+    left: "15%",
+    width: "clamp(130px, 18vw, 220px)",
+    height: "clamp(130px, 18vw, 220px)",
+    borderRadius: "50%",
+    overflow: "hidden",
+    border: "5px solid #FFD700",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+    background: "#fff",
   },
 
+  /* RIGHT FRAME (GIRL) */
+  rightFrame: {
+    position: "absolute",
+    bottom: "120px",
+    right: "15%",
+    width: "clamp(130px, 18vw, 220px)",
+    height: "clamp(130px, 18vw, 220px)",
+    borderRadius: "50%",
+    overflow: "hidden",
+    border: "5px solid #FFD700",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+    background: "#fff",
+  },
+
+  /* IMAGE INSIDE */
+  image: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+  },
+
+  /* NAMES BELOW FRAME */
   leftName: {
     position: "absolute",
-    bottom: "180px",
-    left: "10%",
+    bottom: "60px",   // below frame
+    left: "15%",
+    width: "clamp(130px, 18vw, 220px)",
+    textAlign: "center",
     fontSize: "clamp(16px, 2vw, 22px)",
     color: "#FFD700",
     fontFamily: "cursive",
   },
 
-  /* GIRL */
-  rightPerson: {
-    position: "absolute",
-    bottom: 0,
-    right: "10%",
-    width: "clamp(120px, 18vw, 220px)",
-  },
-
   rightName: {
     position: "absolute",
-    bottom: "180px",
-    right: "10%",
+    bottom: "60px",
+    right: "15%",
+    width: "clamp(130px, 18vw, 220px)",
+    textAlign: "center",
     fontSize: "clamp(16px, 2vw, 22px)",
     color: "#FFD700",
     fontFamily: "cursive",

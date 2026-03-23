@@ -80,7 +80,7 @@ const styles = {
   centerContent: {
     position: "absolute",
     top: "20%",   // moved slightly up for balance
-    left: "4%",
+    left: "0%",
     transform: "translate(-50%, -50%)",
     zIndex: 3,
   },
